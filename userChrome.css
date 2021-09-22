@@ -1,0 +1,11 @@
+/* Show active colors on main menu bar */
+#TabsToolbar,
+#navigator-toolbox {
+    background: -moz-accent-color !important;
+    color: -moz-accent-color-foreground;	/* font color */
+}
+#TabsToolbar:-moz-window-inactive,
+#navigator-toolbox:-moz-window-inactive {
+    background: unset !important;
+    color: unset;
+}
