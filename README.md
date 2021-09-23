@@ -20,3 +20,10 @@ then *userChrome.css* should be in
 ### Enable *userChrome.css*
 * Goto about:config
 * Set **toolkit.legacyUserProfileCustomizations.stylesheets** to **true**
+
+### Tip: Inspect the Firefox browser chrome
+* Open `Developer Tools` by pressing *F12*
+* In *Settings* of *Developer Tools*, enable:
+  * Enable browser chrome and add-on debuggint toolboxes
+  * Enable remote debugging
+* Firefox menu -> More Tools -> Brwoser Toolbox, or press `Ctrl-Shift-Alt-I`
