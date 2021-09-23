@@ -1,11 +1,34 @@
-/* Show active colors on main menu bar */
+/* Show active window color on main menu bar */
 #TabsToolbar,
 #navigator-toolbox {
-    background: -moz-accent-color !important;
-    color: -moz-accent-color-foreground;	/* font color */
+	background: -moz-accent-color !important;
+	color: -moz-accent-color-foreground;	/* font color */
 }
 #TabsToolbar:-moz-window-inactive,
 #navigator-toolbox:-moz-window-inactive {
-    background: unset !important;
-    color: unset;
+	background: unset !important;
+	color: unset;
 }
+/* change color of tab scroll and list tab buttons to match the window caption */
+toolbarbutton#scrollbutton-up image.toolbarbutton-icon,
+toolbarbutton#scrollbutton-down image.toolbarbutton-icon,
+toolbarbutton#alltabs-button image.toolbarbutton-icon,
+toolbarbutton#tabs-newtab-button image.toolbarbutton-icon,
+toolbarbutton#new-tab-button image.toolbarbutton-icon
+{
+	fill: currentColor;
+}
+toolbarbutton#scrollbutton-up image.toolbarbutton-icon:-moz-window-inactive,
+toolbarbutton#scrollbutton-down image.toolbarbutton-icon:-moz-window-inactive,
+toolbarbutton#alltabs-button image.toolbarbutton-icon:-moz-window-inactive,
+toolbarbutton#tabs-newtab-button image.toolbarbutton-icon:-moz-window-inactive,
+toolbarbutton#new-tab-button image.toolbarbutton-icon:-moz-window-inactive
+{
+	fill: unset;
+}
+
+/* Enable drag space above tab bar */
+#main-window[sizemode="normal"] #TabsToolbar .toolbar-items {
+	padding-top: 5px;
+}
+
