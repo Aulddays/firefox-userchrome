@@ -1,3 +1,4 @@
+/***************************************************************************************/
 /* Show active window color on main menu bar */
 #TabsToolbar,
 #navigator-toolbox {
@@ -27,11 +28,15 @@ toolbarbutton#new-tab-button image.toolbarbutton-icon:-moz-window-inactive
 	fill: unset;
 }
 
+
+/***************************************************************************************/
 /* Enable drag space above tab bar */
 #main-window[sizemode="normal"] #TabsToolbar .toolbar-items {
 	padding-top: 8px;
 }
 
+
+/***************************************************************************************/
 /* Adjust tab corner shape, and remove space below tabs */
 #tabbrowser-tabs {
     --user-tab-rounding: 4px;
@@ -48,6 +53,8 @@ toolbarbutton#new-tab-button image.toolbarbutton-icon:-moz-window-inactive
     margin: 0px max(calc(var(--user-tab-rounding) - 4px), 0px) !important;
 }
 
+
+/***************************************************************************************/
 /* Inactive tabs: Separator line style */
 .tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
     border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, .20)) !important;
@@ -65,11 +72,15 @@ toolbarbutton#new-tab-button image.toolbarbutton-icon:-moz-window-inactive
     padding-right: 0 !important;
 }
 
+
+/***************************************************************************************/
 /* 
 	tab min width
 	about:config -> browser.tabs.tabMinWidth
  */
 
+
+/***************************************************************************************/
 /*** Audio Playing / Mute Button side-by-side when sound is playing ***/
 #TabsToolbar {
     --user-mute-button-height: 20px;  /* default size is 12px, site icon is 16px */
@@ -130,6 +141,8 @@ toolbarbutton#new-tab-button image.toolbarbutton-icon:-moz-window-inactive
     fill: lightgreen !important; /* for dark themes */
 }
 
+
+/***************************************************************************************/
 /*** Tighten up drop-down/context/popup menu spacing (8 Sep 2021) ***/
 menupopup:not(.in-menulist) > menuitem, 
 menupopup:not(.in-menulist) > menu {
