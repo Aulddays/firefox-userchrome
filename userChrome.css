@@ -1,9 +1,23 @@
+/* Additional about:config tweaks:
+
+IMPORTANT, this enables userChrome.css
+	toolkit.legacyUserProfileCustomizations.stylesheets: true
+
+tab bar height since v96:
+	browser.tabs.secondaryTextUnsupportedLocales: append ",en"
+
+scroll bar style and width:
+	widget.non-native-theme.scrollbar.size.override: 20
+	widget.non-native-theme.scrollbar.style: 1 (mac, preferred) or 4 (win10)
+*/
+
+
 /***************************************************************************************/
 /* Show active window color on main menu bar */
 #TabsToolbar,
 #navigator-toolbox {
-	background: -moz-accent-color !important;
-	color: -moz-accent-color-foreground;	/* font color */
+	background: AccentColor !important;
+	color: AccentColorText;	/* font color */
 }
 #TabsToolbar:-moz-window-inactive,
 #navigator-toolbox:-moz-window-inactive {
@@ -17,7 +31,7 @@ toolbarbutton#alltabs-button image.toolbarbutton-icon,
 toolbarbutton#tabs-newtab-button image.toolbarbutton-icon,
 toolbarbutton#new-tab-button image.toolbarbutton-icon
 {
-	fill: -moz-accent-color-foreground;
+	fill: AccentColorText;
 }
 toolbarbutton#scrollbutton-up image.toolbarbutton-icon:-moz-window-inactive,
 toolbarbutton#scrollbutton-down image.toolbarbutton-icon:-moz-window-inactive,
@@ -32,8 +46,30 @@ toolbarbutton#new-tab-button image.toolbarbutton-icon:-moz-window-inactive
 /***************************************************************************************/
 /* Enable drag space above tab bar */
 #main-window[sizemode="normal"] #TabsToolbar .toolbar-items {
-	padding-top: 8px;
+	padding-top: 10px;
 }
+
+
+/***************************************************************************************/
+/* Tab close button made smaller */
+.tab-close-button {
+	width: 16px !important;
+	height: 16px !important;
+	font-weight: bold !important;
+	padding: 3px !important;
+}
+
+
+/***************************************************************************************/
+/* Tab height & padding */
+:root {
+	--tab-min-height: 25px !important;
+	--inline-tab-padding: 4px !important;
+}
+/* fix the increased tab height since v96*/
+/*#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+	height: initial !important;
+}*/ /* can be fixed by about:config browser.tabs.secondaryTextUnsupportedLocales */
 
 
 /***************************************************************************************/
